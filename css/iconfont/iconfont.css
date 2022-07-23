@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3542109 */
-  src: url('iconfont.woff2?t=1658560219545') format('woff2'),
-       url('iconfont.woff?t=1658560219545') format('woff'),
-       url('iconfont.ttf?t=1658560219545') format('truetype');
+  src: url('iconfont.woff2?t=1658563886736') format('woff2'),
+       url('iconfont.woff?t=1658563886736') format('woff'),
+       url('iconfont.ttf?t=1658563886736') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,86 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wangpan:before {
+  content: "\e63d";
+}
+
+.icon-wangpan1:before {
+  content: "\e6ab";
+}
+
+.icon-wangpan2:before {
+  content: "\e66d";
+}
+
+.icon-zhihu:before {
+  content: "\e69a";
+}
+
+.icon-QQ:before {
+  content: "\e73e";
+}
+
+.icon-telegram:before {
+  content: "\e8db";
+}
+
+.icon-telegram1:before {
+  content: "\e731";
+}
+
+.icon-QQ1:before {
+  content: "\e882";
+}
+
+.icon-bzhan:before {
+  content: "\e634";
+}
+
+.icon-sign_qq:before {
+  content: "\e638";
+}
+
+.icon-telegram2:before {
+  content: "\ecd5";
+}
+
+.icon-shejiaotubiao-46:before {
+  content: "\e64b";
+}
+
+.icon-telegram3:before {
+  content: "\e8c7";
+}
+
+.icon-29:before {
+  content: "\e619";
+}
+
+.icon-zhihu1:before {
+  content: "\ea8b";
+}
+
+.icon-zhihu-square-fill:before {
+  content: "\ea8c";
+}
+
+.icon-zhihu-circle-fill:before {
+  content: "\ea8d";
+}
+
+.icon-wangpan3:before {
+  content: "\e6e1";
+}
+
+.icon-baiduwangpan:before {
+  content: "\e63e";
+}
+
+.icon-telegram4:before {
+  content: "\e60c";
 }
 
 .icon-weixin4:before {
