@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3542109 */
+  src: url('iconfont.woff2?t=1658556771823') format('woff2'),
+       url('iconfont.woff?t=1658556771823') format('woff'),
+       url('iconfont.ttf?t=1658556771823') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weixin:before {
+  content: "\e73b";
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e625";
+}
+
