@@ -300,24 +300,20 @@ hr:before,
   object-fit: cover;
 }
 .list-beauty,
-.category-lists ul,
-#algolia-search .search-dialog .ais-Hits-list {
+.category-lists ul {
   list-style: none;
 }
 .list-beauty li,
-.category-lists ul li,
-#algolia-search .search-dialog .ais-Hits-list li {
+.category-lists ul li {
   position: relative;
   padding: 0.12em 0.4em 0.12em 1.4em;
 }
 .list-beauty li:hover:before,
-.category-lists ul li:hover:before,
-#algolia-search .search-dialog .ais-Hits-list li:hover:before {
+.category-lists ul li:hover:before {
   border-color: var(--pseudo-hover);
 }
 .list-beauty li:before,
-.category-lists ul li:before,
-#algolia-search .search-dialog .ais-Hits-list li:before {
+.category-lists ul li:before {
   position: absolute;
   top: 0.67em;
   left: 0;
@@ -5702,7 +5698,12 @@ blockquote.pullquote.right {
   display: none;
   background: rgba(0,0,0,0.6);
 }
-#algolia-search .search-dialog .ais-SearchBox input {
+#local-search .search-dialog .local-search-box {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+#local-search .search-dialog .local-search-box input {
   padding: 5px 14px;
   width: 100%;
   outline: none;
@@ -5710,83 +5711,61 @@ blockquote.pullquote.right {
   border-radius: 40px;
   background: var(--search-bg);
   color: var(--search-input-color);
+  -webkit-appearance: none;
 }
-#algolia-search .search-dialog .ais-Hits-list {
-  margin: 0;
-  padding: 0;
+#local-search .search-dialog .search-wrap {
+  display: none;
 }
-#algolia-search .search-dialog .ais-Hits-list a {
+#local-search .search-dialog .local-search__hit-item {
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.7;
+}
+#local-search .search-dialog .local-search__hit-item:hover:before {
+  border-color: var(--pseudo-hover);
+}
+#local-search .search-dialog .local-search__hit-item:before {
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 0.5em;
+  height: 0.5em;
+  border: 3px solid #49b1f5;
+  border-radius: 0.5em;
+  background: transparent;
+  content: '';
+  line-height: 0.5em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#local-search .search-dialog .local-search__hit-item a {
+  display: block;
   color: var(--search-result-title);
+  font-weight: 600;
+  cursor: pointer;
 }
-#algolia-search .search-dialog .ais-Hits-list a:hover {
+#local-search .search-dialog .local-search__hit-item a:hover {
   color: #49b1f5;
 }
-#algolia-search .search-dialog .ais-Hits-list mark {
-  background: transparent;
+#local-search .search-dialog .local-search__hit-item .search-result {
+  margin: 0 8px 8px 0;
+  word-break: break-all;
+}
+#local-search .search-dialog .local-search__hit-item .search-keyword {
   color: #f47466;
   font-weight: bold;
 }
-#algolia-search .search-dialog .algolia-hit-item-content {
-  margin: 0 0 8px;
-  word-break: break-all;
-}
-#algolia-search .search-dialog .ais-Pagination {
-  margin: 20px 0 0;
-  padding: 0;
-  text-align: center;
-}
-#algolia-search .search-dialog .ais-Pagination .ais-Pagination-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item {
-  display: inline;
-  margin: 0 4px;
-  padding: 0;
-}
-#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item .ais-Pagination-link {
-  display: inline-block;
-  min-width: 24px;
-  height: 24px;
-  text-align: center;
-  line-height: 24px;
-}
-#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
-  background: #00c4b6;
-  color: #eee;
-  cursor: default;
-}
-#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--disabled {
-  visibility: hidden;
-}
-#algolia-search .search-dialog .algolia-logo {
-  padding-top: 2px;
-  width: 80px;
-  height: 30px;
-}
-#algolia-search .search-dialog #algolia-hits > div {
-  overflow-y: scroll;
-}
-@media screen and (min-width: 768px) {
-  #algolia-search .search-dialog #algolia-hits > div {
-    max-height: calc(80vh - 240px);
-  }
+#local-search .search-dialog .search-result-list {
+  overflow-y: auto;
+  max-height: calc(80vh - 130px);
 }
 @media screen and (max-width: 768px) {
-  #algolia-search .search-dialog #algolia-hits > div {
-    height: calc(100vh - 260px);
-  }
-}
-#algolia-search .search-dialog #algolia-info div {
-  display: inline;
-}
-#algolia-search .search-dialog #algolia-info .algolia-poweredBy {
-  float: right;
-}
-@media screen and (max-width: 768px) {
-  .apple #algolia-search #algolia-hits > div {
-    height: calc(90vh - 260px);
+  #local-search .search-dialog .search-result-list {
+    padding-bottom: 40px;
+    max-height: 75vh !important;
   }
 }
 .poem-wrap {
