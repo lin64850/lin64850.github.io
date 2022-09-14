@@ -46,7 +46,7 @@
   filter: brightness(0.8);
 }
 #footer:before {
-  background-color: rgba(255,255,255,0.5);
+  background-color: transparent !important;
 }
 [data-theme='dark'] #footer:before {
   background-color: rgba(0,0,0,0.5);
