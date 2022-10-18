@@ -1,16 +1,92 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3611197 */
-  src: url('iconfont.woff2?t=1661516240452') format('woff2'),
-       url('iconfont.woff?t=1661516240452') format('woff'),
-       url('iconfont.ttf?t=1661516240452') format('truetype');
+  src: url('iconfont.woff2?t=1666114846287') format('woff2'),
+       url('iconfont.woff?t=1666114846287') format('woff'),
+       url('iconfont.ttf?t=1666114846287') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 20px;
-  font-style: blod;
+  font-size: 16px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-OCR:before {
+  content: "\e74b";
+}
+
+.icon-ocr:before {
+  content: "\e8cd";
+}
+
+.icon-buildings_aristocrat:before {
+  content: "\ef13";
+}
+
+.icon-wulianwang-:before {
+  content: "\e676";
+}
+
+.icon-OCRshibie:before {
+  content: "\e677";
+}
+
+.icon-OCRshibieguanli:before {
+  content: "\e684";
+}
+
+.icon-ocr1:before {
+  content: "\e702";
+}
+
+.icon-ocr2:before {
+  content: "\e720";
+}
+
+.icon-ocr3:before {
+  content: "\e679";
+}
+
+.icon-OCRshibieyichangjilu:before {
+  content: "\e67f";
+}
+
+.icon-ocryinshuawenzishibie:before {
+  content: "\e70f";
+}
+
+.icon-OCR1:before {
+  content: "\e694";
+}
+
+.icon-OCRshibie1:before {
+  content: "\e680";
+}
+
+.icon-ocr-yinshuawenzishibie:before {
+  content: "\e8a1";
+}
+
+.icon-ocr-yinshuawenzishibie1:before {
+  content: "\e8a3";
+}
+
+.icon-1dataOCR:before {
+  content: "\e83c";
+}
+
+.icon-ocr4:before {
+  content: "\e6d8";
+}
+
+.icon-ocr5:before {
+  content: "\e701";
+}
+
+.icon-OCR2:before {
+  content: "\e738";
 }
 
 .icon-wangpan:before {
