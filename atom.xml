@@ -6,7 +6,7 @@
   <link href="http://lin64850.github.io/atom.xml" rel="self"/>
   
   <link href="http://lin64850.github.io/"/>
-  <updated>2022-12-03T11:27:13.804Z</updated>
+  <updated>2022-12-04T13:17:50.477Z</updated>
   <id>http://lin64850.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PDF转Word等格式工具</title>
+    <link href="http://lin64850.github.io/posts/830dba8a.html"/>
+    <id>http://lin64850.github.io/posts/830dba8a.html</id>
+    <published>2022-12-04T11:00:25.648Z</published>
+    <updated>2022-12-04T13:17:50.477Z</updated>
+    
+    
+    <summary type="html">PDF文档与其他多种格式的文档之间进行互相转换，并且可以对PDF文档直接进行合并、分割、加密、增加水印等一系列操作</summary>
+    
+    
+    
+    <category term="PDF" scheme="http://lin64850.github.io/categories/PDF/"/>
+    
+    
+    <category term="PDF文档与其他多种格式的文档之间进行互相转换" scheme="http://lin64850.github.io/tags/PDF%E6%96%87%E6%A1%A3%E4%B8%8E%E5%85%B6%E4%BB%96%E5%A4%9A%E7%A7%8D%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%87%E6%A1%A3%E4%B9%8B%E9%97%B4%E8%BF%9B%E8%A1%8C%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>2022年12月份微信群日常更新</title>
@@ -386,29 +405,6 @@
     
     
     <category term="Scoop" scheme="http://lin64850.github.io/tags/Scoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bookget数字图书馆（古籍）下载工具</title>
-    <link href="http://lin64850.github.io/posts/edbf0a2c.html"/>
-    <id>http://lin64850.github.io/posts/edbf0a2c.html</id>
-    <published>2022-08-09T07:32:10.944Z</published>
-    <updated>2022-09-06T18:11:10.027Z</updated>
-    
-    
-    <summary type="html">bookget是Windows的命令行下载工具,支持下载国内外多家数字图书馆</summary>
-    
-    
-    
-    
-    <category term="图书" scheme="http://lin64850.github.io/tags/%E5%9B%BE%E4%B9%A6/"/>
-    
-    <category term="图书下载" scheme="http://lin64850.github.io/tags/%E5%9B%BE%E4%B9%A6%E4%B8%8B%E8%BD%BD/"/>
-    
-    <category term="数字图书馆" scheme="http://lin64850.github.io/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/"/>
-    
-    <category term="古籍" scheme="http://lin64850.github.io/tags/%E5%8F%A4%E7%B1%8D/"/>
     
   </entry>
   
