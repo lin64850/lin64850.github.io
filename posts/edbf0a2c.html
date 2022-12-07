@@ -1,0 +1,489 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>bookget数字图书馆（古籍）下载工具 | Eureka</title><meta name="keywords" content="图书,图书下载,数字图书馆,古籍"><meta name="author" content="Eureka"><meta name="copyright" content="Eureka"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="bookget是Windows的命令行下载工具,支持下载国内外多家数字图书馆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bookget数字图书馆（古籍）下载工具">
+<meta property="og:url" content="http://lin64850.github.io/posts/edbf0a2c.html">
+<meta property="og:site_name" content="Eureka">
+<meta property="og:description" content="bookget是Windows的命令行下载工具,支持下载国内外多家数字图书馆">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg">
+<meta property="article:published_time" content="2022-08-09T07:32:10.944Z">
+<meta property="article:modified_time" content="2022-09-06T18:11:10.027Z">
+<meta property="article:author" content="Eureka">
+<meta property="article:tag" content="图书">
+<meta property="article:tag" content="图书下载">
+<meta property="article:tag" content="数字图书馆">
+<meta property="article:tag" content="古籍">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg"><link rel="shortcut icon" href="/img/icon1.png"><link rel="canonical" href="http://lin64850.github.io/posts/edbf0a2c"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'bookget数字图书馆（古籍）下载工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-07 02:11:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/iconfont/iconfont.css"><link rel="stylesheet" href="/css/weibo.css"><link rel="stylesheet" href="/css/collections.css"><link rel="stylesheet" href="/css/modify.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css">
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Eureka" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gears"></i><span> 实用工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/830dba8a.html"><i class="fa-fw iconfont icon-gengxin"></i><span> PDF转Word等格式工具</span></a></li><li><a class="site-page child" href="/posts/2176ae0b.html"><i class="fa-fw iconfont icon-OCRshibieguanli"></i><span> OCR图片文字识别工具</span></a></li><li><a class="site-page child" href="/posts/bab6d8e8.html"><i class="fa-fw iconfont icon-shipin5"></i><span> 视频压缩编辑转换工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-eraser"></i><span> 搜索下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/4cfce446.html"><i class="fa-fw fas fa-music"></i><span> 音乐软件</span></a></li><li><a class="site-page child" href="/posts/6689b7f7.html"><i class="fa-fw iconfont icon-gengxin"></i><span> 影视资源搜索教程</span></a></li><li><a class="site-page child" href="/posts/ae176bbf.html"><i class="fa-fw iconfont icon-shipintianchong"></i><span> 各平台视频下载软件</span></a></li><li><a class="site-page child" href="/posts/81cc5063.html"><i class="fa-fw iconfont icon-tushu1"></i><span> 文献论文电子书搜索</span></a></li><li><a class="site-page child" href="/posts/c7f0fb.html"><i class="fa-fw iconfont icon-tushu2"></i><span> 文库免费下载工具集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-face-dizzy"></i><span> 英语</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/3f43dc72.html"><i class="fa-fw fas fa-signature"></i><span> 英语学习</span></a></li><li><a class="site-page child" href="/posts/c7f8ec10.html"><i class="fa-fw fas fa-file-pdf"></i><span> 英语文档翻译工具</span></a></li><li><a class="site-page child" href="/posts/cf70e3.html"><i class="fa-fw iconfont icon-mianxingtushu"></i><span> 英文写作润色查重工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/ccd47521.html"><i class="fa-fw fas fa-calendar-days"></i><span> 2022群资源</span></a></li><li><a class="site-page child" href="/posts/b77c21ed.html"><i class="fa-fw fas fa-chess-board"></i><span> 系统软件</span></a></li><li><a class="site-page child" href="/posts/b46605ee.html"><i class="fa-fw fas fa-code-compare"></i><span> Github项目实操</span></a></li><li><a class="site-page child" href="/posts/32227.html"><i class="fa-fw fas fa-arrows-to-dot"></i><span> 各种网站合集资源</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-Github"></i><span> 另类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/172a41a0.html"><i class="fa-fw iconfont icon-dianying6"></i><span> 电影剧本</span></a></li><li><a class="site-page child" href="/posts/874bb4f0.html"><i class="fa-fw fas fa-hard-drive"></i><span> 机械硬盘购买指南</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-square-rss"></i><span> RSS订阅</span></a></div><div class="menus_item"><a class="site-page" href="/Message/"><i class="fa-fw fas fa-atom"></i><span> 每日60秒</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Eureka</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gears"></i><span> 实用工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/830dba8a.html"><i class="fa-fw iconfont icon-gengxin"></i><span> PDF转Word等格式工具</span></a></li><li><a class="site-page child" href="/posts/2176ae0b.html"><i class="fa-fw iconfont icon-OCRshibieguanli"></i><span> OCR图片文字识别工具</span></a></li><li><a class="site-page child" href="/posts/bab6d8e8.html"><i class="fa-fw iconfont icon-shipin5"></i><span> 视频压缩编辑转换工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-eraser"></i><span> 搜索下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/4cfce446.html"><i class="fa-fw fas fa-music"></i><span> 音乐软件</span></a></li><li><a class="site-page child" href="/posts/6689b7f7.html"><i class="fa-fw iconfont icon-gengxin"></i><span> 影视资源搜索教程</span></a></li><li><a class="site-page child" href="/posts/ae176bbf.html"><i class="fa-fw iconfont icon-shipintianchong"></i><span> 各平台视频下载软件</span></a></li><li><a class="site-page child" href="/posts/81cc5063.html"><i class="fa-fw iconfont icon-tushu1"></i><span> 文献论文电子书搜索</span></a></li><li><a class="site-page child" href="/posts/c7f0fb.html"><i class="fa-fw iconfont icon-tushu2"></i><span> 文库免费下载工具集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-face-dizzy"></i><span> 英语</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/3f43dc72.html"><i class="fa-fw fas fa-signature"></i><span> 英语学习</span></a></li><li><a class="site-page child" href="/posts/c7f8ec10.html"><i class="fa-fw fas fa-file-pdf"></i><span> 英语文档翻译工具</span></a></li><li><a class="site-page child" href="/posts/cf70e3.html"><i class="fa-fw iconfont icon-mianxingtushu"></i><span> 英文写作润色查重工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/ccd47521.html"><i class="fa-fw fas fa-calendar-days"></i><span> 2022群资源</span></a></li><li><a class="site-page child" href="/posts/b77c21ed.html"><i class="fa-fw fas fa-chess-board"></i><span> 系统软件</span></a></li><li><a class="site-page child" href="/posts/b46605ee.html"><i class="fa-fw fas fa-code-compare"></i><span> Github项目实操</span></a></li><li><a class="site-page child" href="/posts/32227.html"><i class="fa-fw fas fa-arrows-to-dot"></i><span> 各种网站合集资源</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-Github"></i><span> 另类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/172a41a0.html"><i class="fa-fw iconfont icon-dianying6"></i><span> 电影剧本</span></a></li><li><a class="site-page child" href="/posts/874bb4f0.html"><i class="fa-fw fas fa-hard-drive"></i><span> 机械硬盘购买指南</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-square-rss"></i><span> RSS订阅</span></a></div><div class="menus_item"><a class="site-page" href="/Message/"><i class="fa-fw fas fa-atom"></i><span> 每日60秒</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">bookget数字图书馆（古籍）下载工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-09T07:32:10.944Z" title="发表于 2022-08-09 15:32:10">2022-08-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-06T18:11:10.027Z" title="更新于 2022-09-07 02:11:10">2022-09-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="bookget数字图书馆（古籍）下载工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg');"></div><article class="post-content" id="article-container"><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">❌❌❌❌❌ 此项目作者已停止项目维护开发，并清空项目。</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>🏷️ bookget是Windows的命令行下载工具，支持下载国内外多家数字图书馆</strong></p>
+<hr>
+<h1 id="🚨-来源"><a href="#🚨-来源" class="headerlink" title="🚨 来源"></a>🚨 来源</h1><p>项目：<a target="_blank" rel="noopener" href="https://github.com/deweizhu/bookget">https://github.com/deweizhu/bookget</a></p>
+<hr>
+<h1 id="🤡-用户手册"><a href="#🤡-用户手册" class="headerlink" title="🤡 用户手册"></a>🤡 用户手册</h1><h2 id="1-支持的数字图书馆"><a href="#1-支持的数字图书馆" class="headerlink" title="1. 支持的数字图书馆"></a>1. 支持的数字图书馆</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://read.nlc.cn/thematDataSearch/toGujiIndex">中国国家图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://hollis.harvard.edu/">哈佛大学图书馆</a> <a target="_blank" rel="noopener" href="https://gj.library.sh.cn/org/harvard">或哈佛燕京图书馆藏</a></li>
+<li><a target="_blank" rel="noopener" href="http://rbook.ncl.edu.tw/">中国台北图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hathitrust.org/">hathitrust数字图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://library.princeton.edu/">普林斯顿大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://rmda.kulib.kyoto-u.ac.jp/">日本京都大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.loc.gov/collections/chinese-rare-books/">美国国会图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="http://dl.ndl.go.jp/">日本国立国会图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://emuseum.nich.go.jp/">日本E国宝e-Museum</a></li>
+<li><a target="_blank" rel="noopener" href="https://db2.sido.keio.ac.jp/kanseki/T_bib_search.php">日本宫内厅书陵部</a></li>
+<li><a target="_blank" rel="noopener" href="http://shanben.ioc.u-tokyo.ac.jp/list.php">日本东京大学东洋文化研究所</a></li>
+<li><a target="_blank" rel="noopener" href="https://repository.lib.cuhk.edu.hk/sc/collection">中国香港中文大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://digital.bodleian.ox.ac.uk/collections/chinese-digitization-project/">牛津大学博德利图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.digital.archives.go.jp/">日本国立公文书馆（内库文库）</a></li>
+<li><a target="_blank" rel="noopener" href="http://dsr.nii.ac.jp/toyobunko/index.html.ja">日本东洋文库</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.wul.waseda.ac.jp/kotenseki/search.php">日本早稻田大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dlibrary.go.kr/">韩国国家图书馆</a> <a target="_blank" rel="noopener" href="https://lod.nl.go.kr/">或开放数据</a></li>
+<li><a target="_blank" rel="noopener" href="https://kotenseki.nijl.ac.jp/">新日本古典籍综合数据库</a></li>
+<li><a target="_blank" rel="noopener" href="https://digital.staatsbibliothek-berlin.de/">德国柏林国立图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="http://kanji.zinbun.kyoto-u.ac.jp/db-machine/toho/html/top.html">日本京都大学人文科学研究所 - 东方学数字图书博物馆</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.bl.uk/manuscripts/">英国图书馆（藏有手稿本）</a></li>
+<li><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/">中国香港科技大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://rbk-doc.npm.edu.tw/">中国台北故宫博物院 – 善本古籍</a></li>
+<li><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/">日本国立历史民俗博物馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.library.yonezawa.yamagata.jp/dg/zen.html">日本本市立米泽图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/ja/kanseki">日本庆应义塾大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.iiif.ku-orcas.kansai-u.ac.jp/books">日本关西大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="http://221.13.137.120:8090/index.php">中国河南省洛阳市图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://oyjy.wzlib.cn/pdf/">中国浙江省温州市图书馆-瓯越记忆</a></li>
+<li><a target="_blank" rel="noopener" href="https://ostasien.digitale-sammlungen.de/">巴伐利亚州立图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://searchworks.stanford.edu/?f%5Baccess_facet%5D%5B%5D=Online&amp;f%5Bbuilding_facet%5D%5B%5D=East+Asia&amp;f%5Bformat_main_ssim%5D%5B%5D=Book&amp;f%5Blanguage%5D%5B%5D=Chinese&amp;utf8=%E2%9C%93">斯坦福大学图书馆</a></li>
+<li><a target="_blank" rel="noopener" href="https://yun.szlib.org.cn/stgj2021/">中国广东省深圳市图书馆-古籍</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.familysearch.org/search/collection/1787988">familysearch.org 中國族譜收藏 1239-2014年</a><br><a target="_blank" rel="noopener" href="https://www.familysearch.org/records/images/">familysearch.org 家譜圖像</a></li>
+<li><a target="_blank" rel="noopener" href="http://gzdd.gzlib.gov.cn/Hrcanton/">中国广东省广州大典</a></li>
+</ol>
+<hr>
+<h2 id="2-支持的数字图书馆URL格式"><a href="#2-支持的数字图书馆URL格式" class="headerlink" title="2. 支持的数字图书馆URL格式"></a>2. 支持的数字图书馆URL格式</h2><p><strong><font style="color: red;">在urls.txt文件中，毎行一个URL，回车换行，可以有多个URL。 原则上，以你能在浏览器中【在线阅读】书籍正文的URL为下载地址</font></strong></p>
+<ol>
+<li>中国国家图书馆：</li>
+</ol>
+<blockquote>
+<p>整书多册URL：<a target="_blank" rel="noopener" href="http://read.nlc.cn/allSearch/searchDetail?searchType=1002&amp;showType=1&amp;indexName=data_892&amp;fid=411999021002">http://read.nlc.cn/allSearch/searchDetail?searchType=1002&amp;showType=1&amp;indexName=data_892&amp;fid=411999021002</a><br>或者单册URL：<a target="_blank" rel="noopener" href="http://read.nlc.cn/OutOpenBook/OpenObjectBook?aid=403&amp;bid=70621.0">http://read.nlc.cn/OutOpenBook/OpenObjectBook?aid=403&amp;bid=70621.0</a> </p>
+</blockquote>
+<ol>
+<li>hathitrust 数字图书馆-图书单册URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://babel.hathitrust.org/cgi/pt?id=uc1.c087423515&amp;view=1up&amp;seq=1&amp;skin=2021">https://babel.hathitrust.org/cgi/pt?id=uc1.c087423515&amp;view=1up&amp;seq=1&amp;skin=2021</a> </p>
+</blockquote>
+<ol>
+<li>哈佛大学图书馆-图书在线阅读（分享）URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://iiif.lib.harvard.edu/manifests/view/drs:53262215">https://iiif.lib.harvard.edu/manifests/view/drs:53262215</a> </p>
+</blockquote>
+<ol>
+<li>日本京东大学图书馆-图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://rmda.kulib.kyoto-u.ac.jp/item/rb00024956">https://rmda.kulib.kyoto-u.ac.jp/item/rb00024956</a> </p>
+</blockquote>
+<ol>
+<li>日本京都大学人文科学研究所-图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://kanji.zinbun.kyoto-u.ac.jp/db-machine/toho/ShiSanJingZhuShu/html/A002menu.html">http://kanji.zinbun.kyoto-u.ac.jp/db-machine/toho/ShiSanJingZhuShu/html/A002menu.html</a> </p>
+</blockquote>
+<ol>
+<li>美国国会图书馆</li>
+</ol>
+<p><font style="color: red;">注：中国大陆访问此网站需自备海外网络，免海外网络方法需要cookie.txt，方法参考：<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iv00B099qfkf">cookie.md</a> </font></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.loc.gov/item/2014514163/">https://www.loc.gov/item/2014514163/</a> </p>
+</blockquote>
+<ol>
+<li>普林斯顿大学图书馆 – 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://catalog.princeton.edu/catalog/9940468523506421">https://catalog.princeton.edu/catalog/9940468523506421</a> <a target="_blank" rel="noopener" href="https://dpul.princeton.edu/catalog/99915a8b423b596e47540e3feeee19b8">https://dpul.princeton.edu/catalog/99915a8b423b596e47540e3feeee19b8</a> </p>
+</blockquote>
+<ol>
+<li>日本国立国会图书馆 – 部分图书在线阅读URL（其它的可以手动打印下载）</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://dl.ndl.go.jp/info:ndljp/pid/8929985">https://dl.ndl.go.jp/info:ndljp/pid/8929985</a> </p>
+</blockquote>
+<ol>
+<li>中国台北图书馆古典与特藏文献 –（白天很慢，可夜间或清晨下载）</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://rbook.ncl.edu.tw/NCLSearch/Search/SearchDetail?item=422a7598bd0046aebf2684ae0f945d25fDcyODIz0&amp;image=1&amp;page=&amp;whereString=&amp;sourceWhereString=&amp;SourceID=">https://rbook.ncl.edu.tw/NCLSearch/Search/SearchDetail?item=422a7598bd0046aebf2684ae0f945d25fDcyODIz0&amp;image=1&amp;page=&amp;whereString=&amp;sourceWhereString=&amp;SourceID=</a> </p>
+</blockquote>
+<ol>
+<li>日本E国宝 – 画册在线阅读URL（部分单图有误，暂未修复）</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://emuseum.nich.go.jp/detail?content_base_id=100168&amp;content_part_id=009&amp;langId=zh&amp;webView=">https://emuseum.nich.go.jp/detail?content_base_id=100168&amp;content_part_id=009&amp;langId=zh&amp;webView=</a> </p>
+</blockquote>
+<ol>
+<li>日本宫内厅书陵部 – 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://db2.sido.keio.ac.jp/kanseki/T_bib_frame.php?id=006754">https://db2.sido.keio.ac.jp/kanseki/T_bib_frame.php?id=006754</a> </p>
+</blockquote>
+<ol>
+<li>日本东京大学东洋文化研究所 汉籍善本 – 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://shanben.ioc.u-tokyo.ac.jp/main_p.php?nu=C5613401&amp;order=rn_no&amp;no=00870">http://shanben.ioc.u-tokyo.ac.jp/main_p.php?nu=C5613401&amp;order=rn_no&amp;no=00870</a> </p>
+</blockquote>
+<ol>
+<li>中国香港中文大学图书馆 – 图书在线阅读URL（需自备海外网络，从海外访问）</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://repository.lib.cuhk.edu.hk/sc/item/cuhk-412225#page/1/mode/2up">https://repository.lib.cuhk.edu.hk/sc/item/cuhk-412225#page/1/mode/2up</a> </p>
+</blockquote>
+<ol>
+<li>牛津大学博德利图书馆 – 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://digital.bodleian.ox.ac.uk/objects/310cb04e-6bce-44e3-85b5-03417c9644a8/">https://digital.bodleian.ox.ac.uk/objects/310cb04e-6bce-44e3-85b5-03417c9644a8/</a> </p>
+</blockquote>
+<ol>
+<li>日本国立公文书馆（内库文库） - 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.digital.archives.go.jp/DAS/meta/listPhoto?LANG=default&amp;BID=F1000000000000095447&amp;ID=&amp;NO=&amp;TYPE=">https://www.digital.archives.go.jp/DAS/meta/listPhoto?LANG=default&amp;BID=F1000000000000095447&amp;ID=&amp;NO=&amp;TYPE=</a> </p>
+</blockquote>
+<ol>
+<li>日本早稻田大学图书馆 – 图书在线阅读URL</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://archive.wul.waseda.ac.jp/kosho/ri08/ri08_01899/">https://archive.wul.waseda.ac.jp/kosho/ri08/ri08_01899/</a> </p>
+</blockquote>
+<ol>
+<li><p>日本东洋文库（丝绸之路项目） - 图书在线阅读URL</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://dsr.nii.ac.jp/toyobunko/XI-6-A-16/V-1/">http://dsr.nii.ac.jp/toyobunko/XI-6-A-16/V-1/</a> </p>
+</blockquote>
+</li>
+<li><p>韩国国家图书馆 （<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/i61MD099pvza">必须参考pdf文档</a>）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://lod.nl.go.kr/page/CNTS-00076977176">http://lod.nl.go.kr/page/CNTS-00076977176</a> </p>
+</blockquote>
+</li>
+<li><p>新日本古典籍综合数据库（<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/it9JT099q4sh">必须参考pdf文档</a>）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://kotenseki.nijl.ac.jp/biblio/100270332/viewer/1">https://kotenseki.nijl.ac.jp/biblio/100270332/viewer/1</a> <a target="_blank" rel="noopener" href="https://kotenseki.nijl.ac.jp/biblio/100270332">https://kotenseki.nijl.ac.jp/biblio/100270332</a> </p>
+</blockquote>
+</li>
+<li><p>德国柏林图书馆URL</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN3343671770">https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN3343671770</a> <a target="_blank" rel="noopener" href="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN3343671770&amp;PHYSID=PHYS_0001">https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN3343671770&amp;PHYSID=PHYS_0001</a> </p>
+</blockquote>
+</li>
+<li><p>英国图书馆URL（只生成dezoomify-rs.urls文件，生成后，请双击它下载）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_6814!1_fs001r">http://www.bl.uk/manuscripts/Viewer.aspx?ref=or_6814!1_fs001r</a> </p>
+</blockquote>
+</li>
+<li><p>中国香港科技大学图书馆URL</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/bib/b1129168">https://lbezone.ust.hk/bib/b1129168</a> </p>
+</blockquote>
+</li>
+<li><p>日本国立历史民俗博物馆</p>
+<blockquote>
+<p>单册URL: <a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-1">https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-1</a> <a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohanshiki/h-173-1">https://khirin-a.rekihaku.ac.jp/sohanshiki/h-173-1</a><br>多册URL，使用和“批量下载”相同格式，但是无需修改config.ini中配置。 如：第1-9册，第10-90册。用圆括号包围数字。<br><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-(1-90)">https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-(1-90)</a> <a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohankanjo/h-173-(1-61)">https://khirin-a.rekihaku.ac.jp/sohankanjo/h-173-(1-61)</a> </p>
+</blockquote>
+</li>
+<li><p>日本本市立米泽图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.library.yonezawa.yamagata.jp/dg/AA001_view.html">https://www.library.yonezawa.yamagata.jp/dg/AA001_view.html</a> <a target="_blank" rel="noopener" href="https://www.library.yonezawa.yamagata.jp/dg/AA002_view.html">https://www.library.yonezawa.yamagata.jp/dg/AA002_view.html</a> </p>
+</blockquote>
+</li>
+<li><p>日本庆应义塾大学图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1">https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1</a> </p>
+</blockquote>
+</li>
+<li><p>日本关西大学图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.iiif.ku-orcas.kansai-u.ac.jp/books/210185040#?page=1">https://www.iiif.ku-orcas.kansai-u.ac.jp/books/210185040#?page=1</a> </p>
+</blockquote>
+</li>
+<li><p>中国河南省洛阳市图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://221.13.137.120:8090/productshow.php?cid=4&amp;id=112">http://221.13.137.120:8090/productshow.php?cid=4&amp;id=112</a> </p>
+</blockquote>
+</li>
+<li><p>中国浙江省温州市图书馆 - 瓯越记忆(自动下载相关资源分卷分册)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://oyjy.wzlib.cn/resource/?id=61e4c764505415b2e6921e5e">https://oyjy.wzlib.cn/resource/?id=61e4c764505415b2e6921e5e</a> <a target="_blank" rel="noopener" href="https://oyjy.wzlib.cn/resource/?id=62c56bb357de1ef36b1f5614">https://oyjy.wzlib.cn/resource/?id=62c56bb357de1ef36b1f5614</a> </p>
+</blockquote>
+</li>
+<li><p>巴伐利亚州立图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ostasien.digitale-sammlungen.de/view/bsb11129280/1">https://ostasien.digitale-sammlungen.de/view/bsb11129280/1</a> </p>
+</blockquote>
+</li>
+<li><p>斯坦福大学图书馆</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://searchworks.stanford.edu/view/4182111">https://searchworks.stanford.edu/view/4182111</a>    </p>
+</blockquote>
+</li>
+<li><p>中国广东省深圳市图书馆-古籍</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://yun.szlib.org.cn/stgj2021/srchshowbook?type=4&amp;book_id=18269">https://yun.szlib.org.cn/stgj2021/srchshowbook?type=4&amp;book_id=18269</a>   <a target="_blank" rel="noopener" href="https://yun.szlib.org.cn/stgj2021/srchshowbook?type=1&amp;book_id=18017">https://yun.szlib.org.cn/stgj2021/srchshowbook?type=1&amp;book_id=18017</a> </p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.familysearch.org/search/collection/1787988">familysearch.org 中國族譜收藏 1239-2014年</a><br><font style="color: red;">注：此站点需要cookie.txt，方法参考：<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iv00B099qfkf">cookie.md</a></font></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9SM-C8KN?wc=3X27-MNY:1022211401,1021934502,1021937102,1021937602,1022419701&amp;cc=1787988">https://www.familysearch.org/ark:/61903/3:1:3QS7-L9SM-C8KN?wc=3X27-MNY%3A1022211401%2C1021934502%2C1021937102%2C1021937602%2C1022419701&amp;cc=1787988</a><br><a target="_blank" rel="noopener" href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9SM-CRG9?wc=3X2Q-BZ7:1022211401,1021934502,1021937102,1021937602,1022421801&amp;cc=1787988">https://www.familysearch.org/ark:/61903/3:1:3QS7-L9SM-CRG9?wc=3X2Q-BZ7%3A1022211401%2C1021934502%2C1021937102%2C1021937602%2C1022421801&amp;cc=1787988</a></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.familysearch.org/records/images/">familysearch.org 家譜圖像</a> </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.familysearch.org/ark:/61903/3:1:3QS7-L9S9-WS92?view=explore&amp;groupId=M94X-6HR">https://www.familysearch.org/ark:/61903/3:1:3QS7-L9S9-WS92?view=explore&amp;groupId=M94X-6HR</a><br><a target="_blank" rel="noopener" href="https://www.familysearch.org/records/images/image-details?rmsId=M94F-78D&amp;jiapuOnly=true&amp;surname=%E6%9C%B1&amp;place=2013&amp;showUnknown=true&amp;page=1&amp;pageSize=100&amp;imageIndex=0">https://www.familysearch.org/records/images/image-details?rmsId=M94F-78D&amp;jiapuOnly=true&amp;surname=%E6%9C%B1&amp;place=2013&amp;showUnknown=true&amp;page=1&amp;pageSize=100&amp;imageIndex=0</a></p>
+</blockquote>
+</li>
+<li><p>中国广东省广州大典(<a target="_blank" rel="noopener" href="http://gzdd.gzlib.gov.cn/Hrcanton/">http://gzdd.gzlib.gov.cn/Hrcanton/</a>)<br><font style="color: red;">注：此站点需要cookie.txt，方法参考：<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iv00B099qfkf">cookie.md</a></font></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://gzdd.gzlib.gov.cn/Hrcanton/Search/ResultDetail?BookId=GZDD022601004">http://gzdd.gzlib.gov.cn/Hrcanton/Search/ResultDetail?BookId=GZDD022601004</a><br><a target="_blank" rel="noopener" href="http://gzdd.gzlib.gov.cn/Hrcanton/Search/ResultSummary?bookid=GZDD022601004&amp;filename=GZDD022601004#">http://gzdd.gzlib.gov.cn/Hrcanton/Search/ResultSummary?bookid=GZDD022601004&amp;filename=GZDD022601004#</a></p>
+</blockquote>
+</li>
+<li><p>中国台北故宫博物院-善本古籍URL</p>
+<p> （<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iG2py099ql7i">必须参考PDF文档</a>）</p>
+</li>
+</ol>
+<h2 id="3-IIIF自动检测"><a href="#3-IIIF自动检测" class="headerlink" title="3. IIIF自动检测"></a>3. IIIF自动检测</h2><p><strong><font style="color: red;">IIF是一种业界标准，凡使用此标准的网站，都有提供IIIF Manifest 链接，如哈佛大学、牛津大学等图书馆。适用性更广，理论上所有支持IIIF的图书馆都可以下载</font></strong><br><strong>使用方法</strong><br>启用自动检测功能，需要在config.ini中找到 AutoDetect = 0 改为 2，保存文件。</p>
+<blockquote>
+<p>AutoDetect = 2 </p>
+</blockquote>
+<p>设置为2以后，就关闭了内置支持的二十多个图书馆。用完以后，不要忘记再改为0。<br>复制包含IIIF Manifest链接的网页URL，或者直接复制IIIF Manifest的URL， 粘贴到urls.txt中保存，运行bookget即可自动检测识别。<br>如果检测成功，你会看到类似以下内容的提示。</p>
+<blockquote>
+<p>2022/03/27 08:00:54 Auto Detect 0001  <a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1">https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1</a><br>2022/03/27 08:00:55 Get 0001  <a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/sites/default/files/iiif/KAN/110X-24-1/manifest.json">https://dcollections.lib.keio.ac.jp/sites/default/files/iiif/KAN/110X-24-1/manifest.json</a><br>2022/03/27 08:00:56 A total of 46 pages.<br>2022/03/27 08:00:56 Save as  D:\src\bookget\Downloads\book.110X-24-1\dezoomify-rs.urls.bat  (5.38 KB)<br>2022/03/27 08:00:56 Get 0001  <a target="_blank" rel="noopener" href="https://iiif.lib.keio.ac.jp/iipsrv/KAN/110X-24-1/tif/001.tif/full/full/0/default.jpg">https://iiif.lib.keio.ac.jp/iipsrv/KAN/110X-24-1/tif/001.tif/full/full/0/default.jpg</a> </p>
+</blockquote>
+<p>附：已通过测试的URL如下 第一种：IIIF Manifest 的URL（推荐手动找URL）</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://iiif.lib.harvard.edu/manifests/drs:53262215">https://iiif.lib.harvard.edu/manifests/drs:53262215</a><br><a target="_blank" rel="noopener" href="https://digicoll.lib.berkeley.edu/nanna/iiif/91514/manifest">https://digicoll.lib.berkeley.edu/nanna/iiif/91514/manifest</a><br><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/iiif/rekihaku/H-173-1/manifest.json">https://khirin-a.rekihaku.ac.jp/iiif/rekihaku/H-173-1/manifest.json</a><br><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/manifests/sohan_shiki/H-172-01.json">https://khirin-a.rekihaku.ac.jp/manifests/sohan_shiki/H-172-01.json</a><br><a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/sites/default/files/iiif/KAN/110X-24-1/manifest.json">https://dcollections.lib.keio.ac.jp/sites/default/files/iiif/KAN/110X-24-1/manifest.json</a><br><a target="_blank" rel="noopener" href="https://iiif.bodleian.ox.ac.uk/iiif/manifest/310cb04e-6bce-44e3-85b5-03417c9644a8.json">https://iiif.bodleian.ox.ac.uk/iiif/manifest/310cb04e-6bce-44e3-85b5-03417c9644a8.json</a><br><a target="_blank" rel="noopener" href="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11129280/manifest">https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11129280/manifest</a><br><a target="_blank" rel="noopener" href="https://figgy.princeton.edu/concern/scanned_resources/e5313f5e-f2fc-4bdd-a894-7cffac271dfd/manifest">https://figgy.princeton.edu/concern/scanned_resources/e5313f5e-f2fc-4bdd-a894-7cffac271dfd/manifest</a> </p>
+</blockquote>
+<p>第二种：包含IIIF Manifest链接的网页URL</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1">https://dcollections.lib.keio.ac.jp/ja/kanseki/110x-24-1</a><br><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-1">https://khirin-a.rekihaku.ac.jp/sohanshiki/h-172-1</a><br><a target="_blank" rel="noopener" href="https://khirin-a.rekihaku.ac.jp/sohankanjo/h-173-1">https://khirin-a.rekihaku.ac.jp/sohankanjo/h-173-1</a> </p>
+</blockquote>
+<h2 id="4-通用批量下载-http-x2F-https链接"><a href="#4-通用批量下载-http-x2F-https链接" class="headerlink" title="4. 通用批量下载(http/https链接)"></a>4. 通用批量下载(http/https链接)</h2><p><strong><font style="color: red;">因考虑到bookget不可能支持无穷数量的网站，特别提供通用批量下载功能。当然，这个功能在很多下载工具中都有了，</font></strong><br><strong><font style="color: red;">bookget只是提供自动生成 0001/0002这样的顺序下载，以保证批量下载时文件名不乱</font></strong><br><strong>使用方法：</strong><br>启用此功能，需要在config.ini中找到 AutoDetect = 0 改为 1，保存文件。</p>
+<blockquote>
+<p>AutoDetect = 1 </p>
+</blockquote>
+<p>设置为1以后，就关闭了内置支持的二十多个图书馆。用完以后，不要忘记再改为0。<br>例如： 第1页网址是</p>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00001.jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00001.jpg</a> </p>
+<p>第2页网址是</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00002.jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00002.jpg</a> </p>
+</blockquote>
+<p>…… 第84页网址是</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00084.jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00084.jpg</a> </p>
+</blockquote>
+<p>那么，你可以在【urls.txt】文件中填写以下URL，即可下载全部84页。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg000(01-84).jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg000(01-84).jpg</a> </p>
+</blockquote>
+<p>注解：支持(01-100) 、(1-100)、(001-100)等格式通配符写法。<br>如果你想下载第31-40页，可以使用以下URL</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg000(31-40).jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg000(31-40).jpg</a> </p>
+</blockquote>
+<p>如果你只想下载第1页，可以使用以下URL：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00001.jpg">https://lbezone.ust.hk/obj/6/o/b1129168/ebook/pg00001.jpg</a></p>
+</blockquote>
+<h2 id="5-高级：自定义用户cookie"><a href="#5-高级：自定义用户cookie" class="headerlink" title="5. 高级：自定义用户cookie"></a>5. 高级：自定义用户cookie</h2><p><strong><font style="color: red;">部分网站下载，需要身份鉴权，可以在用户登录后复制浏览器中的cookie，给 bookget 创建  <a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iv00B099qfkf">cookie.txt</a> 模拟浏览器下载</font></strong></p>
+<hr>
+<h1 id="🛠️-实际操作"><a href="#🛠️-实际操作" class="headerlink" title="🛠️ 实际操作"></a>🛠️ 实际操作</h1><ul>
+<li><strong>测试环境：Windows</strong></li>
+</ul>
+<ol>
+<li><p>打开 <a target="_blank" rel="noopener" href="https://github.com/deweizhu/bookget/releases/latest">最新正式版网页</a>, 下载匹配你操作系统的版本 (Windows, MacOS, 或 Linux)</p>
+<pre><code>🔸 下载：https://wwc.lanzoul.com/iVMIp099rc8b
+</code></pre>
+</li>
+<li><p>解压缩到电脑中任意文件夹下。</p>
+</li>
+<li><p>以 Windows 用户为例，下载中国国家图书馆的书 —— 欽定古今圖書集成。<br> 只需在 <code>urls.txt</code> 文件中填写图书网址（以下简称URL），并保存文件。</p>
+</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://read.nlc.cn/allSearch/searchDetail?searchType=1002&amp;showType=1&amp;indexName=data_892&amp;fid=411999021002">http://read.nlc.cn/allSearch/searchDetail?searchType=1002&amp;showType=1&amp;indexName=data_892&amp;fid=411999021002</a></p>
+</blockquote>
+<p>  <img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-08-09_17-42-21.jpg"><br>  <font style="color: red;">如需批量下载多本图书，可以填写多行下载地址，每行一个URL</font></p>
+<ol start="4">
+<li>按 快捷键  <code>Windows 图标 + R</code>  打开  <code>运行</code>  对话框 ，并输入  <code>CMD</code></li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-08-09_17-43-24.jpg"></p>
+<ol start="5">
+<li>如下图所示，找到 bookget.exe 拖拽到黑色窗口中，回车即可运行。</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-08-09_17-43-32.jpg"></p>
+<ol start="6">
+<li>等待下载完成，程序会自动退出。请到  <code>Downloads</code>  目录下查看已下载文件。</li>
+</ol>
+<p><strong><font style="color: red;">注：ctrl + c 可终止下载任务</font></strong><br><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-08-09_17-43-38.jpg"></p>
+<ol start="7">
+<li>下载的文件</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-08-09_17-43-42.jpg"></p>
+<hr>
+<p> 🔔  <a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/iPyAk099rsti">bookget使用说明v0.2.4.pdf</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://lin64850.github.io">Eureka</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lin64850.github.io/posts/edbf0a2c.html">http://lin64850.github.io/posts/edbf0a2c.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lin64850.github.io" target="_blank">Eureka</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9B%BE%E4%B9%A6/">图书</a><a class="post-meta__tags" href="/tags/%E5%9B%BE%E4%B9%A6%E4%B8%8B%E8%BD%BD/">图书下载</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/">数字图书馆</a><a class="post-meta__tags" href="/tags/%E5%8F%A4%E7%B1%8D/">古籍</a></div><div class="post_share"><div class="social-share" data-image="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg" data-sites="wechat,weibo,qq,douban,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/b46605ee.html"><img class="prev-cover" src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-11-28_20-54-35.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Github项目实操</div></div></a></div><div class="next-post pull-right"><a href="/posts/6c4c90ed.html"><img class="next-cover" src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZrhPl_UYAIF8cb.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Scoop命令行安装程序</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">Eureka</div><div class="author-info__description">木槿昔年，浮生未歇</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">63</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" href="/img/weixin.jpg"><i class="iconfont icon-weixin2"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/img/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="http://z007.ysepan.com/" target="_blank" title="永硕E盘"><i class="iconfont icon-TencentCloud"></i></a><a class="social-icon" href="https://t.me/fku0007" target="_blank" title="电报telegram"><i class="iconfont icon-telegram"></i></a><a class="social-icon" href="/img/email.jpg" target="_blank" title="邮箱地址"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">正常更新中... 有问题进群加微信联系</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9A%A8-%E6%9D%A5%E6%BA%90"><span class="toc-text">🚨 来源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%A4%A1-%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C"><span class="toc-text">🤡 用户手册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86"><span class="toc-text">1. 支持的数字图书馆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86URL%E6%A0%BC%E5%BC%8F"><span class="toc-text">2. 支持的数字图书馆URL格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-IIIF%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B"><span class="toc-text">3. IIIF自动检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%80%9A%E7%94%A8%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD-http-x2F-https%E9%93%BE%E6%8E%A5"><span class="toc-text">4. 通用批量下载(http/https链接)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%AB%98%E7%BA%A7%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E7%94%A8%E6%88%B7cookie"><span class="toc-text">5. 高级：自定义用户cookie</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C"><span class="toc-text">🛠️ 实际操作</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/830dba8a.html" title="PDF转Word等格式工具"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-12-04_19-14-20.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PDF转Word等格式工具"></a><div class="content"><a class="title" href="/posts/830dba8a.html" title="PDF转Word等格式工具">PDF转Word等格式工具</a><time datetime="2022-12-04T11:00:25.648Z" title="发表于 2022-12-04 19:00:25">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/79c4b88d.html" title="2022年12月份微信群日常更新"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-12-01_13-50-28.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2022年12月份微信群日常更新"></a><div class="content"><a class="title" href="/posts/79c4b88d.html" title="2022年12月份微信群日常更新">2022年12月份微信群日常更新</a><time datetime="2022-12-01T05:43:20.964Z" title="发表于 2022-12-01 13:43:20">2022-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4cfce446.html" title="音乐软件"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-11-28_20-29-38.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="音乐软件"></a><div class="content"><a class="title" href="/posts/4cfce446.html" title="音乐软件">音乐软件</a><time datetime="2022-11-13T12:06:51.795Z" title="发表于 2022-11-13 20:06:51">2022-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/55baad92.html" title="2022年11月份微信群日常更新"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-11-28_20-27-40.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2022年11月份微信群日常更新"></a><div class="content"><a class="title" href="/posts/55baad92.html" title="2022年11月份微信群日常更新">2022年11月份微信群日常更新</a><time datetime="2022-11-01T07:02:41.260Z" title="发表于 2022-11-01 15:02:41">2022-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2176ae0b.html" title="OCR图片文字识别工具"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Snipaste_2022-11-28_20-32-53.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OCR图片文字识别工具"></a><div class="content"><a class="title" href="/posts/2176ae0b.html" title="OCR图片文字识别工具">OCR图片文字识别工具</a><time datetime="2022-10-18T08:36:31.681Z" title="发表于 2022-10-18 16:36:31">2022-10-18</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">©2022 By Eureka</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/备案图标.png">
+<a href="http://www.beian.miit.gov.cn/" style="color:#f72b07" target="_blank">闽 ICP 备 2022011941号 - 1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="/js/weibo.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax="" src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax="">
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?lin64850";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="lin64850";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
