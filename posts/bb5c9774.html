@@ -1,0 +1,603 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>lux-各平台视频图片下载工具 | Eureka</title><meta name="keywords" content="视频下载"><meta name="author" content="Eureka"><meta name="copyright" content="Eureka"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个用 Go 构建的跨平台快速简单的视频下载器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lux-各平台视频图片下载工具">
+<meta property="og:url" content="http://lin64850.github.io/posts/bb5c9774.html">
+<meta property="og:site_name" content="Eureka">
+<meta property="og:description" content="一个用 Go 构建的跨平台快速简单的视频下载器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU86X0AAI1ka.jpg">
+<meta property="article:published_time" content="2023-04-22T12:56:23.770Z">
+<meta property="article:modified_time" content="2022-08-09T10:04:23.291Z">
+<meta property="article:author" content="Eureka">
+<meta property="article:tag" content="视频下载">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU86X0AAI1ka.jpg"><link rel="shortcut icon" href="/img/icon1.png"><link rel="canonical" href="http://lin64850.github.io/posts/bb5c9774"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'lux-各平台视频图片下载工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-09 18:04:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/iconfont/iconfont.css"><link rel="stylesheet" href="/css/weibo.css"><link rel="stylesheet" href="/css/collections.css"><link rel="stylesheet" href="/css/modify.css"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"K35REEBZhefucqRC",ck:"K35REEBZhefucqRC"})</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css">
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Eureka" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gears"></i><span> 实用工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/830dba8a.html"><i class="fa-fw iconfont icon-gengxin"></i><span> PDF转Word等格式工具</span></a></li><li><a class="site-page child" href="/posts/2176ae0b.html"><i class="fa-fw iconfont icon-OCRshibieguanli"></i><span> OCR图片文字识别工具</span></a></li><li><a class="site-page child" href="/posts/bab6d8e8.html"><i class="fa-fw iconfont icon-shipin5"></i><span> 视频压缩编辑转换工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-eraser"></i><span> 搜索下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/4cfce446.html"><i class="fa-fw fas fa-music"></i><span> 音乐软件</span></a></li><li><a class="site-page child" href="/posts/6689b7f7.html"><i class="fa-fw iconfont icon-gengxin"></i><span> 影视资源搜索教程</span></a></li><li><a class="site-page child" href="/posts/ae176bbf.html"><i class="fa-fw iconfont icon-shipintianchong"></i><span> 各平台视频下载软件</span></a></li><li><a class="site-page child" href="/posts/81cc5063.html"><i class="fa-fw iconfont icon-tushu1"></i><span> 文献论文电子书搜索</span></a></li><li><a class="site-page child" href="/posts/c7f0fb.html"><i class="fa-fw iconfont icon-tushu2"></i><span> 文库免费下载工具集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-face-dizzy"></i><span> 英语</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/3f43dc72.html"><i class="fa-fw fas fa-signature"></i><span> 英语学习</span></a></li><li><a class="site-page child" href="/posts/c7f8ec10.html"><i class="fa-fw fas fa-file-pdf"></i><span> 英语文档翻译工具</span></a></li><li><a class="site-page child" href="/posts/cf70e3.html"><i class="fa-fw iconfont icon-mianxingtushu"></i><span> 英文写作润色查重工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/ccd47521.html"><i class="fa-fw fas fa-calendar-days"></i><span> 微信群日更资源汇总</span></a></li><li><a class="site-page child" href="/posts/b77c21ed.html"><i class="fa-fw fas fa-chess-board"></i><span> 系统软件</span></a></li><li><a class="site-page child" href="/posts/b46605ee.html"><i class="fa-fw fas fa-code-compare"></i><span> Github项目实操</span></a></li><li><a class="site-page child" href="/posts/32227.html"><i class="fa-fw fas fa-arrows-to-dot"></i><span> 各种网站合集资源</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-Github"></i><span> 另类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/172a41a0.html"><i class="fa-fw iconfont icon-dianying6"></i><span> 电影剧本</span></a></li><li><a class="site-page child" href="/posts/874bb4f0.html"><i class="fa-fw fas fa-hard-drive"></i><span> 机械硬盘购买指南</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-square-rss"></i><span> RSS订阅</span></a></div><div class="menus_item"><a class="site-page" href="/Message/"><i class="fa-fw fas fa-atom"></i><span> 每日60秒</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU86X0AAI1ka.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Eureka</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gears"></i><span> 实用工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/830dba8a.html"><i class="fa-fw iconfont icon-gengxin"></i><span> PDF转Word等格式工具</span></a></li><li><a class="site-page child" href="/posts/2176ae0b.html"><i class="fa-fw iconfont icon-OCRshibieguanli"></i><span> OCR图片文字识别工具</span></a></li><li><a class="site-page child" href="/posts/bab6d8e8.html"><i class="fa-fw iconfont icon-shipin5"></i><span> 视频压缩编辑转换工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-eraser"></i><span> 搜索下载</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/4cfce446.html"><i class="fa-fw fas fa-music"></i><span> 音乐软件</span></a></li><li><a class="site-page child" href="/posts/6689b7f7.html"><i class="fa-fw iconfont icon-gengxin"></i><span> 影视资源搜索教程</span></a></li><li><a class="site-page child" href="/posts/ae176bbf.html"><i class="fa-fw iconfont icon-shipintianchong"></i><span> 各平台视频下载软件</span></a></li><li><a class="site-page child" href="/posts/81cc5063.html"><i class="fa-fw iconfont icon-tushu1"></i><span> 文献论文电子书搜索</span></a></li><li><a class="site-page child" href="/posts/c7f0fb.html"><i class="fa-fw iconfont icon-tushu2"></i><span> 文库免费下载工具集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-face-dizzy"></i><span> 英语</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/3f43dc72.html"><i class="fa-fw fas fa-signature"></i><span> 英语学习</span></a></li><li><a class="site-page child" href="/posts/c7f8ec10.html"><i class="fa-fw fas fa-file-pdf"></i><span> 英语文档翻译工具</span></a></li><li><a class="site-page child" href="/posts/cf70e3.html"><i class="fa-fw iconfont icon-mianxingtushu"></i><span> 英文写作润色查重工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/ccd47521.html"><i class="fa-fw fas fa-calendar-days"></i><span> 微信群日更资源汇总</span></a></li><li><a class="site-page child" href="/posts/b77c21ed.html"><i class="fa-fw fas fa-chess-board"></i><span> 系统软件</span></a></li><li><a class="site-page child" href="/posts/b46605ee.html"><i class="fa-fw fas fa-code-compare"></i><span> Github项目实操</span></a></li><li><a class="site-page child" href="/posts/32227.html"><i class="fa-fw fas fa-arrows-to-dot"></i><span> 各种网站合集资源</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-Github"></i><span> 另类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/posts/172a41a0.html"><i class="fa-fw iconfont icon-dianying6"></i><span> 电影剧本</span></a></li><li><a class="site-page child" href="/posts/874bb4f0.html"><i class="fa-fw fas fa-hard-drive"></i><span> 机械硬盘购买指南</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/atom.xml"><i class="fa-fw fas fa-square-rss"></i><span> RSS订阅</span></a></div><div class="menus_item"><a class="site-page" href="/Message/"><i class="fa-fw fas fa-atom"></i><span> 每日60秒</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">lux-各平台视频图片下载工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-22T12:56:23.770Z" title="发表于 2023-04-22 20:56:23">2023-04-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-09T10:04:23.291Z" title="更新于 2022-08-09 18:04:23">2022-08-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="lux-各平台视频图片下载工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU86X0AAI1ka.jpg');"></div><article class="post-content" id="article-container"><p><strong>🏷️ Lux 是一个用 Go 构建的跨平台快速简单的视频下载器。</strong></p>
+<hr>
+<h2 id="🚨-项目来源"><a href="#🚨-项目来源" class="headerlink" title="🚨 项目来源"></a>🚨 项目来源</h2><p>项目：<a target="_blank" rel="noopener" href="https://github.com/iawia002/lux/">https://github.com/iawia002/lux/</a></p>
+<hr>
+<h2 id="💡-项目特性"><a href="#💡-项目特性" class="headerlink" title="💡 项目特性"></a>💡 项目特性</h2><p>•支持 <code>Windows</code> <code>MacOS</code> <code>Linux</code><br>•下载视频/图片/音频/播放列表/字幕<br>•继续下载/自动重试<br>•支持附加 Cookie 和代理<br>•支持多线程、重用提取数据<br>•指定输出路径或名称<br><font style="color: red;">•支持网站：</font><br>    •YouTube/Facebook/Twitter/Instagram<br>    •抖音/优酷/爱奇艺/芒果/腾讯视频<br>    •P/X/Tumblr/Tiktok<br>    •虎扑/虎牙/喜马拉雅/微博<br>    •……</p>
+<hr>
+<h2 id="🚩-支持平台"><a href="#🚩-支持平台" class="headerlink" title="🚩 支持平台"></a>🚩 支持平台</h2><p><strong><font style="color: red;">注意：</font></strong></p>
+<blockquote>
+<p>优酷的 <code>ccode</code>经常变化导致 lux 不可用，如果你知道有新的可用的 <code>ccode</code>，可以直接使用<code>lux -ccode ...</code> 而不用等待 lux 更新（当然，也欢迎你给我们提一个 Pull request 来更新默认的 <code>ccode</code>）<br>最好是每次下载都附带登录过的 Cookie 以避免部分<code>ccode</code>的问题.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">站点</th>
+<th align="left">网址</th>
+<th align="center"><strong>🎬 Videos</strong></th>
+<th align="center">🌁 Images</th>
+<th align="center">🔊 Audio</th>
+<th align="right">📚 Playlist</th>
+<th align="center">🍪 VIP adaptation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">抖音</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.douyin.com/">https://www.douyin.com</a></td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">哔哩哔哩</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.bilibili.com/">https://www.bilibili.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right">✅</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td align="left">半次元</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://bcy.net/">https://bcy.net</a></td>
+<td align="center"></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">pixivision</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.pixivision.net/">https://www.pixivision.net</a></td>
+<td align="center"></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">优酷</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.youku.com/">https://www.youku.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td align="left">YouTube</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.youtube.com/">https://www.youtube.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right">✅</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">西瓜视频（头条）</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://m.toutiao.com/">https://m.toutiao.com</a> , <a target="_blank" rel="noopener" href="https://v.ixigua.com/">https://v.ixigua.com</a> , <a target="_blank" rel="noopener" href="https://www.ixigua.com/">https://www.ixigua.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">爱奇艺</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.iqiyi.com/">https://www.iqiyi.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">新片场</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.xinpianchang.com/">https://www.xinpianchang.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">芒果 TV</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.mgtv.com/">https://www.mgtv.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">糖豆广场舞</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.tangdou.com/">https://www.tangdou.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Tumblr</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.tumblr.com/">https://www.tumblr.com</a></td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Vimeo</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://vimeo.com/">https://vimeo.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Facebook</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://facebook.com/">https://facebook.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">斗鱼视频</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://v.douyu.com/">https://v.douyu.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">秒拍</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.miaopai.com/">https://www.miaopai.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">微博</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://weibo.com/">https://weibo.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Instagram</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.instagram.com/">https://www.instagram.com</a></td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Twitter</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://twitter.com/">https://twitter.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">腾讯视频</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://v.qq.com/">https://v.qq.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">网易云音乐</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://music.163.com/">https://music.163.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">音悦台</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://yinyuetai.com/">https://yinyuetai.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">极客时间</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://time.geekbang.org/">https://time.geekbang.org</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">聯合新聞網</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://udn.com/">https://udn.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">TikTok</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.tiktok.com/">https://www.tiktok.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">好看视频</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://haokan.baidu.com/">https://haokan.baidu.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">AcFun</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.acfun.cn/">https://www.acfun.cn</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right">✅</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Eporner</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://eporner.com/">https://eporner.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">StreamTape</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://streamtape.com/">https://streamtape.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">虎扑</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://hupu.com/">https://hupu.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">虎牙视频</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://v.huya.com/">https://v.huya.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">喜马拉雅</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.ximalaya.com/">https://www.ximalaya.com</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">✅</td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">快手</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.kuaishou.com/">https://www.kuaishou.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Reddit</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.reddit.com/">https://www.reddit.com</a></td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">VKontakte</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://vk.com/">https://vk.com</a></td>
+<td align="center">✅</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🧿-软件下载"><a href="#🧿-软件下载" class="headerlink" title="🧿 软件下载"></a>🧿 软件下载</h2><blockquote>
+<p><strong>本文操作用到的软件</strong></p>
+</blockquote>
+<p>🔗附件 ：<a target="_blank" rel="noopener" href="https://wwc.lanzoul.com/idz8M099t2id">lux_0.15.0_Windows_64-bit.rar</a><br>⛅链接： <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/18ZhYcxaPB8NNi1mtlTJvWA?pwd=yr9b">https://pan.baidu.com/s/18ZhYcxaPB8NNi1mtlTJvWA?pwd=yr9b</a> 提取码：yr9b </p>
+<hr>
+<h2 id="🛠️-实际操作"><a href="#🛠️-实际操作" class="headerlink" title="🛠️ 实际操作"></a>🛠️ 实际操作</h2><ul>
+<li><strong>测试环境：Windows</strong></li>
+</ul>
+<ol>
+<li>从 <a target="_blank" rel="noopener" href="https://www.gyan.dev/ffmpeg/builds/#release-builds">FFmpeg Builds</a> 下载压缩包，将其中  <code>bin/ffmpeg.exe</code>  解压出来备用</li>
+<li>打开<a target="_blank" rel="noopener" href="https://github.com/iawia002/lux/releases">lux Releases</a></li>
+</ol>
+<ul>
+<li>32位系统下载 <a target="_blank" rel="noopener" href="https://github.com/iawia002/lux/releases/download/v0.15.0/lux_0.15.0_Windows_32-bit.zip">lux_0.15.0_Windows_32-bit.zip</a> ，并解压</li>
+<li>64位系统下载 <a target="_blank" rel="noopener" href="https://github.com/iawia002/lux/releases/download/v0.15.0/lux_0.15.0_Windows_64-bit.zip">lux_0.15.0_Windows_64-bit.zip</a> ，并解压</li>
+</ul>
+<p>之后将  <code>ffmpeg.exe</code>  复制到和 <code>lux_0.15.0_Windows_64-bit</code>  同一目录下<br><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726081191-38c3c4cc-8ac5-49ff-98ca-8c3c1c8c440e.png"></p>
+<ol start="3">
+<li>在  <code>lux_0.15.0_Windows_64-bit</code> 目录下输入  <code>“cmd”</code>  回车</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726111223-370c31d6-1670-4aa3-989f-30ae9c084ad3.png"></p>
+<ol start="4">
+<li>会在当前目录打开 <code>命令提示符</code> 对话框</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726175838-2a180852-1833-418b-9865-c8baccd38729.png"></p>
+<ol start="5">
+<li>输入命令 <code>lux --help</code>  查看格式说明</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726254699-f2f10e5e-7d29-467c-8a1b-3cbfea4675b6.png"></p>
+<ol start="6">
+<li>打开一个要下载视频的平台</li>
+</ol>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 比如：爱奇艺</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.iqiyi.com/v_1aopfcjs1w8.html?vfrm=pcw_home&amp;vfrmblk=712211_cainizaizhui&amp;vfrmrst=712211_cainizaizhui_image2">https://www.iqiyi.com/v_1aopfcjs1w8.html?vfrm=pcw_home&amp;vfrmblk=712211_cainizaizhui&amp;vfrmrst=712211_cainizaizhui_image2</a><br><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Compress_1657726378537-24364fb0-b1e8-4aae-9cef-440e4de6ca54.jpg"></p>
+<ol start="7">
+<li>在  <code>CMD 命令提示符</code>  下输入下载视频格式即可</li>
+</ol>
+<p>格式： <code>lux</code>  “视频地址”<br>例子： <code>lux</code>  “ <a target="_blank" rel="noopener" href="https://www.iqiyi.com/v_1aopfcjs1w8.html?vfrm=pcw_home&amp;vfrmblk=712211_cainizaizhui&amp;vfrmrst=712211_cainizaizhui_image2">https://www.iqiyi.com/v_1aopfcjs1w8.html?vfrm=pcw_home&amp;vfrmblk=712211_cainizaizhui&amp;vfrmrst=712211_cainizaizhui_image2</a>”<br><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726692397-2d3a8bcb-ddfc-412d-9165-a6611cdf8247.png"></p>
+<ol start="8">
+<li>下载完成后会自动保存文件到  <code>lux</code>  程序目录下</li>
+</ol>
+<p><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/1657726754961-40c9511a-3cb3-498f-aeb0-42f1731b8985.png"></p>
+<hr>
+<h2 id="🔥-进阶使用"><a href="#🔥-进阶使用" class="headerlink" title="🔥 进阶使用"></a>🔥 进阶使用</h2><h3 id="1-视频下载"><a href="#1-视频下载" class="headerlink" title="1. 视频下载"></a>1. 视频下载</h3><blockquote>
+<p>$ lux “<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ%22">https://www.youtube.com/watch?v=dQw4w9WgXcQ"</a><br>Site:      YouTube youtube.com<br>Title:     Rick Astley - Never Gonna Give You Up (Video)<br>Type:      video<br>Stream:<br>  [248]  ——————-<br>  Quality:         1080p video/webm; codecs=”vp9”<br>  Size:            63.93 MiB (67038963 Bytes)</p>
+<p>download with: lux -f 248 …</p>
+<p>41.88 MiB / 63.93 MiB [=================&gt;————-]  65.51% 4.22 MiB/s 00m05s</p>
+</blockquote>
+<p>The   <code>i</code>   option displays all available quality of video without downloading.</p>
+<blockquote>
+<p>$ lux -i “<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ%22">https://www.youtube.com/watch?v=dQw4w9WgXcQ"</a><br>Site:      YouTube youtube.com<br>Title:     Rick Astley - Never Gonna Give You Up (Video)<br>Type:      video<br>Streams:   # All available quality<br>  [248]  ——————-<br>  Quality:         1080p video/webm; codecs=”vp9”<br>  Size:            49.29 MiB (51687554 Bytes)</p>
+<p>#download with: lux -f 248 …</p>
+<p>  [137]  ——————-<br>  Quality:         1080p video/mp4; codecs=”avc1.640028”<br>  Size:            43.45 MiB (45564306 Bytes)</p>
+<p>#download with: lux -f 137 …</p>
+<p>  [398]  ——————-<br>  Quality:         720p video/mp4; codecs=”av01.0.05M.08”<br>  Size:            37.12 MiB (38926432 Bytes)</p>
+<p>#download with: lux -f 398 …</p>
+<p>  [136]  ——————-<br>  Quality:         720p video/mp4; codecs=”avc1.4d401f”<br>  Size:            31.34 MiB (32867324 Bytes)</p>
+<p>#download with: lux -f 136 …</p>
+<p>  [247]  ——————-<br>  Quality:         720p video/webm; codecs=”vp9”<br>  Size:            31.03 MiB (32536181 Bytes)</p>
+<p>#download with: lux -f 247 …</p>
+</blockquote>
+<p>Use  <code>lux -f stream "URL"</code>  to download a specific stream listed in the output of i option.</p>
+<h3 id="2-其他下载"><a href="#2-其他下载" class="headerlink" title="2. 其他下载"></a>2. 其他下载</h3><p>If Lux is provided the URL of a specific resource, then it will be downloaded directly：</p>
+<blockquote>
+<p>$ lux “<a target="_blank" rel="noopener" href="https://img9.bcyimg.com/drawer/15294/post/1799t/1f5a87801a0711e898b12b640777720f.jpg%22">https://img9.bcyimg.com/drawer/15294/post/1799t/1f5a87801a0711e898b12b640777720f.jpg"</a><br>lux doesn’t support this URL right now, but it will try to download it directly<br>Site:      Universal<br>Title:     1f5a87801a0711e898b12b640777720f<br>Type:      image/jpeg<br>Stream:<br>  [default]  ——————-<br>  Size:            1.00 MiB (1051042 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>1.00 MiB / 1.00 MiB [===================================] 100.00% 1.21 MiB/s 0s</p>
+</blockquote>
+<h3 id="3-播放列表下载"><a href="#3-播放列表下载" class="headerlink" title="3. 播放列表下载"></a>3. 播放列表下载</h3><p> The  <code>-p</code>  option downloads an entire playlist instead of a single video.</p>
+<blockquote>
+<p>$ lux -i -p “<a target="_blank" rel="noopener" href="https://www.bilibili.com/bangumi/play/ep198061%22">https://www.bilibili.com/bangumi/play/ep198061"</a><br>Site:      哔哩哔哩 bilibili.com<br>Title:     Doctor X 第四季：第一集<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            845.66 MiB (886738354 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>Site:      哔哩哔哩 bilibili.com<br>Title:     Doctor X 第四季：第二集<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            930.71 MiB (975919195 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>……</p>
+</blockquote>
+<p>You can use the   <code>-start</code>,   <code>-end</code> or   <code>-items</code> option to specify the download range of the list：</p>
+<blockquote>
+<p>-start<br>        Playlist video to start at (default 1)<br>-end<br>        Playlist video to end at<br>-items<br>        Playlist video items to download. Separated by commas like: 1,5,6,8-10</p>
+</blockquote>
+<p>For bilibili playlists only:</p>
+<blockquote>
+<p>-eto<br>  File name of each bilibili episode doesn’t include the playlist title</p>
+</blockquote>
+<h3 id="4-批量下载"><a href="#4-批量下载" class="headerlink" title="4. 批量下载"></a>4. 批量下载</h3><p>You can also download multiple URLs at once：</p>
+<blockquote>
+<p>$ lux -i “<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21877586%22">https://www.bilibili.com/video/av21877586"</a> “<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21990740%22">https://www.bilibili.com/video/av21990740"</a><br>Site:      哔哩哔哩 bilibili.com<br>Title:     【莓机会了】甜到虐哭的13集单集MAD「我现在什么都不想干,更不想看14集」<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            51.88 MiB (54403767 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>Site:      哔哩哔哩 bilibili.com<br>Title:     【莓救了】甜到虐哭！！！国家队单集MAD-当熟悉的bgm响起，眼泪从脸颊滑下<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            77.63 MiB (81404093 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+</blockquote>
+<p>These URLs will be downloaded one by one.<br>You can also use the -F option to read URLs from file：</p>
+<blockquote>
+<p>$ lux -F ~/Desktop/u.txt<br>Site:      微博 weibo.com<br>Title:     在Google，我们设计什么？ via@阑夕<br>Type:      video<br>Stream:<br>  [default]  ——————-<br>  Size:            19.19 MiB (20118196 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>19.19 MiB / 19.19 MiB [=================================] 100.00% 9.69 MiB/s 1s<br>……</p>
+</blockquote>
+<p>You can use the  <code>-start</code>,   <code>-end</code> or   <code>-items</code>   option to specify the download range of the list：</p>
+<blockquote>
+<p>-start<br>        File line to start at (default 1)<br>-end<br>        File line to end at<br>-items<br>        File lines to download. Separated by commas like: 1,5,6,8-10</p>
+</blockquote>
+<h3 id="5-B站ep、av号下载"><a href="#5-B站ep、av号下载" class="headerlink" title="5. B站ep、av号下载"></a>5. B站ep、av号下载</h3><p>使用b站的  <code>ep</code>  或  <code>av</code>  来下载视频<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv7510180/">⁉️ 科普：B站不但有av号和bv号，竟然还有mc号、ep号？</a></p>
+<blockquote>
+<p>$ lux -i ep198381 av21877586<br>Site:      哔哩哔哩 bilibili.com<br>Title:     狐妖小红娘：第79话 南国公主的吃货本色<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            485.23 MiB (508798478 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+<p>Site:      哔哩哔哩 bilibili.com<br>Title:     【莓机会了】甜到虐哭的13集单集MAD「我现在什么都不想干,更不想看14集」<br>Type:      video<br>Streams:   # All available quality<br>  [default]  ——————-<br>  Quality:         高清 1080P<br>  Size:            51.88 MiB (54403767 Bytes)</p>
+<p>#download with: lux -f default “URL”</p>
+</blockquote>
+<h3 id="6-关联"><a href="#6-关联" class="headerlink" title="6. 关联"></a>6. 关联</h3><blockquote>
+<p>各平台下载  <a target="_blank" rel="noopener" href="https://www.yuque.com/eureka007/ziyuan/uyh39v">网站</a></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://lin64850.github.io">Eureka</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://lin64850.github.io/posts/bb5c9774.html">http://lin64850.github.io/posts/bb5c9774.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://lin64850.github.io" target="_blank">Eureka</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/">视频下载</a></div><div class="post_share"><div class="social-share" data-image="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU86X0AAI1ka.jpg" data-sites="wechat,weibo,qq,douban,google"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/edbf0a2c.html"><img class="prev-cover" src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqbU88WIAIXDUd.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">bookget数字图书馆（古籍）下载工具</div></div></a></div><div class="next-post pull-right"><a href="/posts/cd08c763.html"><img class="next-cover" src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FZqqT3PWYAAejhF.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PC版微信/QQ/TIM的多开、防撤回插件</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">Eureka</div><div class="author-info__description">木槿昔年，浮生未歇</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" href="/img/weixin.jpg"><i class="iconfont icon-weixin2"></i><span>联系我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/img/weixin.jpg" target="_blank" title="微信"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="http://z007.ysepan.com/" target="_blank" title="永硕E盘"><i class="iconfont icon-TencentCloud"></i></a><a class="social-icon" href="https://t.me/fku0007" target="_blank" title="电报telegram"><i class="iconfont icon-telegram"></i></a><a class="social-icon" href="/img/email.jpg" target="_blank" title="邮箱地址"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">⭐正常更新中！！！<br>有问题进群加微信:PPTTMU</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9A%A8-%E9%A1%B9%E7%9B%AE%E6%9D%A5%E6%BA%90"><span class="toc-text">🚨 项目来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%92%A1-%E9%A1%B9%E7%9B%AE%E7%89%B9%E6%80%A7"><span class="toc-text">💡 项目特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9A%A9-%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0"><span class="toc-text">🚩 支持平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A7%BF-%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">🧿 软件下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C"><span class="toc-text">🛠️ 实际操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%A5-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8"><span class="toc-text">🔥 进阶使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD"><span class="toc-text">1. 视频下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B6%E4%BB%96%E4%B8%8B%E8%BD%BD"><span class="toc-text">2. 其他下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E4%B8%8B%E8%BD%BD"><span class="toc-text">3. 播放列表下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD"><span class="toc-text">4. 批量下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-B%E7%AB%99ep%E3%80%81av%E5%8F%B7%E4%B8%8B%E8%BD%BD"><span class="toc-text">5. B站ep、av号下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%85%B3%E8%81%94"><span class="toc-text">6. 关联</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/53638223.html" title="2023年7月份微信群日常更新"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Eureka_2023-07-02_02-44-52.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023年7月份微信群日常更新"></a><div class="content"><a class="title" href="/posts/53638223.html" title="2023年7月份微信群日常更新">2023年7月份微信群日常更新</a><time datetime="2023-07-01T18:37:26.626Z" title="发表于 2023-07-02 02:37:26">2023-07-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a0f4a2a2.html" title="数据恢复软件"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Eureka_2023-06-28_18-47-00.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据恢复软件"></a><div class="content"><a class="title" href="/posts/a0f4a2a2.html" title="数据恢复软件">数据恢复软件</a><time datetime="2023-06-28T10:47:58.261Z" title="发表于 2023-06-28 18:47:58">2023-06-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/52d67f3e.html" title="2023年6月份微信群日常更新"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Eureka_2023-06-01_22-18-52.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023年6月份微信群日常更新"></a><div class="content"><a class="title" href="/posts/52d67f3e.html" title="2023年6月份微信群日常更新">2023年6月份微信群日常更新</a><time datetime="2023-06-01T14:21:23.129Z" title="发表于 2023-06-01 22:21:23">2023-06-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/50087819.html" title="2023年5月份微信群日常更新"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/Eureka_2023-05-03_22-00-10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023年5月份微信群日常更新"></a><div class="content"><a class="title" href="/posts/50087819.html" title="2023年5月份微信群日常更新">2023年5月份微信群日常更新</a><time datetime="2023-05-03T13:53:48.177Z" title="发表于 2023-05-03 21:53:48">2023-05-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dec36813.html" title="常用软件"><img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/FY1krXLVUAAILt1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常用软件"></a><div class="content"><a class="title" href="/posts/dec36813.html" title="常用软件">常用软件</a><time datetime="2023-04-22T12:56:23.781Z" title="发表于 2023-04-22 20:56:23">2023-04-22</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">©2022 - 2023 By Eureka</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<img src="https://eureka-1302416167.cos.ap-nanjing.myqcloud.com/img/备案图标.png">
+<a href="http://www.beian.miit.gov.cn/" style="color:#f72b07" target="_blank">闽 ICP 备 2022011941号 - 1</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="/js/weibo.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,13 @@
+.collections-item-content{
+  font-size: 95%;
+  font-weight: bolder;
+}
+.collections-item-content > a:link{
+  color: #64b2ff;
+}
+.collections-item-content > a:visited{
+  color: #64b2ff;
+}
+.collections-item-content > a:hover{
+  color: #5e7987;
+}
