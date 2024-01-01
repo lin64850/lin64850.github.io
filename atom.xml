@@ -6,7 +6,7 @@
   <link href="http://lin64850.github.io/atom.xml" rel="self"/>
   
   <link href="http://lin64850.github.io/"/>
-  <updated>2023-12-31T11:09:27.980Z</updated>
+  <updated>2024-01-01T03:37:06.441Z</updated>
   <id>http://lin64850.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2024年01月份微信群日常更新</title>
+    <link href="http://lin64850.github.io/posts/ae3204a4.html"/>
+    <id>http://lin64850.github.io/posts/ae3204a4.html</id>
+    <published>2023-12-31T11:31:44.693Z</published>
+    <updated>2024-01-01T03:37:06.441Z</updated>
+    
+    
+    <summary type="html">收集微信群每日更新的资源</summary>
+    
+    
+    
+    <category term="微信" scheme="http://lin64850.github.io/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+    <category term="微信群日常资源分享更新" scheme="http://lin64850.github.io/tags/%E5%BE%AE%E4%BF%A1%E7%BE%A4%E6%97%A5%E5%B8%B8%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2023年12月份微信群日常更新</title>
     <link href="http://lin64850.github.io/posts/4f36287e.html"/>
     <id>http://lin64850.github.io/posts/4f36287e.html</id>
     <published>2023-12-01T11:51:29.474Z</published>
-    <updated>2023-12-31T11:09:27.980Z</updated>
+    <updated>2023-12-31T11:32:03.281Z</updated>
     
     
     <summary type="html">收集微信群每日更新的资源</summary>
@@ -400,29 +419,6 @@
     
     
     <category term="视频下载" scheme="http://lin64850.github.io/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bookget数字图书馆（古籍）下载工具</title>
-    <link href="http://lin64850.github.io/posts/edbf0a2c.html"/>
-    <id>http://lin64850.github.io/posts/edbf0a2c.html</id>
-    <published>2023-04-22T12:56:23.769Z</published>
-    <updated>2023-12-04T12:49:19.832Z</updated>
-    
-    
-    <summary type="html">bookget是Windows的命令行下载工具,支持下载国内外多家数字图书馆</summary>
-    
-    
-    
-    
-    <category term="图书" scheme="http://lin64850.github.io/tags/%E5%9B%BE%E4%B9%A6/"/>
-    
-    <category term="图书下载" scheme="http://lin64850.github.io/tags/%E5%9B%BE%E4%B9%A6%E4%B8%8B%E8%BD%BD/"/>
-    
-    <category term="数字图书馆" scheme="http://lin64850.github.io/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/"/>
-    
-    <category term="古籍" scheme="http://lin64850.github.io/tags/%E5%8F%A4%E7%B1%8D/"/>
     
   </entry>
   
