@@ -6,7 +6,7 @@
   <link href="http://lin64850.github.io/atom.xml" rel="self"/>
   
   <link href="http://lin64850.github.io/"/>
-  <updated>2024-03-31T13:16:56.480Z</updated>
+  <updated>2024-04-02T10:37:28.939Z</updated>
   <id>http://lin64850.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2024年4月份微信群日常更新</title>
+    <link href="http://lin64850.github.io/posts/e9289791.html"/>
+    <id>http://lin64850.github.io/posts/e9289791.html</id>
+    <published>2024-04-02T10:29:25.912Z</published>
+    <updated>2024-04-02T10:37:28.939Z</updated>
+    
+    
+    <summary type="html">收集微信群每日更新的资源</summary>
+    
+    
+    
+    <category term="微信" scheme="http://lin64850.github.io/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+    <category term="微信群日常资源分享更新" scheme="http://lin64850.github.io/tags/%E5%BE%AE%E4%BF%A1%E7%BE%A4%E6%97%A5%E5%B8%B8%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2024年3月份微信群日常更新</title>
     <link href="http://lin64850.github.io/posts/ad59fe9e.html"/>
     <id>http://lin64850.github.io/posts/ad59fe9e.html</id>
     <published>2024-03-01T12:59:14.511Z</published>
-    <updated>2024-03-31T13:16:56.480Z</updated>
+    <updated>2024-04-02T10:29:46.386Z</updated>
     
     
     <summary type="html">收集微信群每日更新的资源</summary>
@@ -40,7 +59,7 @@
     <link href="http://lin64850.github.io/posts/acec0383.html"/>
     <id>http://lin64850.github.io/posts/acec0383.html</id>
     <published>2024-02-01T13:17:53.983Z</published>
-    <updated>2024-03-01T12:59:29.879Z</updated>
+    <updated>2024-04-02T10:30:06.262Z</updated>
     
     
     <summary type="html">收集微信群每日更新的资源</summary>
@@ -398,23 +417,6 @@
     <category term="直播" scheme="http://lin64850.github.io/tags/%E7%9B%B4%E6%92%AD/"/>
     
     <category term="录制工具" scheme="http://lin64850.github.io/tags/%E5%BD%95%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scoop命令行安装程序</title>
-    <link href="http://lin64850.github.io/posts/6c4c90ed.html"/>
-    <id>http://lin64850.github.io/posts/6c4c90ed.html</id>
-    <published>2023-04-22T12:56:23.772Z</published>
-    <updated>2023-12-04T12:50:02.120Z</updated>
-    
-    
-    <summary type="html">一个强大的包管理工具，类似你电脑上的软件管家</summary>
-    
-    
-    
-    
-    <category term="Scoop" scheme="http://lin64850.github.io/tags/Scoop/"/>
     
   </entry>
   
